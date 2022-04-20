@@ -1,4 +1,3 @@
-
 package galeriaprojekt;
 
 import java.util.ArrayList;
@@ -7,13 +6,13 @@ import java.util.Collections;
 public class GaleriaProjekt {
 
     public static void main(String[] args) {
-        
-        
+
         Modell m = new Modell();
         m.faljleterhozasa();
+        System.out.println(m.toString());
         megjenelit();
-        
-    }//rendezés cim és szerző szerint
+
+    }
 
     private static void megjenelit() {
         ArrayList<String> keszito = new ArrayList<>();
@@ -24,10 +23,7 @@ public class GaleriaProjekt {
         cim.add("Kacsa a tóban");
         cim.add("Golya a tetön");
         cim.add("Ló az istállóban");
-       
-       
-        
-        Galeria g = new Galeria();
+
         for (String string : cim) {
             Collections.sort(cim);
         }
@@ -38,6 +34,7 @@ public class GaleriaProjekt {
             System.out.println(cim);
             System.out.println(keszito);
         }
+
     }
-    
+
 }

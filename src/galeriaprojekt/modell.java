@@ -2,12 +2,13 @@ package galeriaprojekt;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.Serializable;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Modell {
+public class Modell implements Serializable {
 
     public Date datum = new Date();
 
@@ -18,10 +19,10 @@ public class Modell {
         return datum;
     }
 
-   /* @Override
+    @Override
     public String toString() {
         return "Modell{" + "datum=" + datum + '}';
-    }*/
+    }
     
 
     public void faljleterhozasa() {
@@ -34,7 +35,7 @@ public class Modell {
 class Galeria {
 
     public void felveszUjtargyakat() throws IOException {
-       // Files.readAllLines(Paths.get("..\\kep.txt"));
+        Files.readAllLines(Paths.get("..\\kep.txt"));
         KiallitasiTargy kl = new KiallitasiTargy() {
         };
         kl.festmenyek();
