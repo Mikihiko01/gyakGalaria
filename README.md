@@ -1,1 +1,1 @@
-# gyakGalaria
+# Tellér Ádám Balázs
